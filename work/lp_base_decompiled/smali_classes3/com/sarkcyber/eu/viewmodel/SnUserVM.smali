@@ -1233,8 +1233,8 @@
 
     invoke-virtual {v0, v2}, Lcom/sarkcyber/eu/viewmodel/SnBluetoothVM;->O(Lcom/sarkcyber/eu/bean/SnCarBleMacBean;)V
 
-    # Patched v11: call W() to initialize default SnDeviceInfoBean (GPS coordinates)
-    invoke-virtual {p0}, Lcom/sarkcyber/eu/viewmodel/SnUserVM;->W()V
+    # Patched v12: removed W() call — Berlin default GPS was overriding phone's real GPS
+    # Phone GPS fallback in SnCurrentPositionFragment will show actual location instead
 
     return-void
 .end method
